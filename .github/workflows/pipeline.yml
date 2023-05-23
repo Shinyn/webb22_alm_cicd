@@ -45,16 +45,6 @@ jobs:
       - name: Run supertest
         run: npm run supertest
 
-  deploy-test:
-    name: Deploy to Test Server
-    needs: [unit-tests, linting, supertest]
-    if: ${{ github.ref != 'refs/heads/main' }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print deployment message
-        run: |
-          echo "now deploying branch: ${{ github.ref }} to the test server"
-
   deploy-production:
     name: Deploy to Production
     needs: [unit-tests, linting, supertest]
