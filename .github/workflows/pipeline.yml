@@ -51,6 +51,8 @@ jobs:
       - name: Print deployment message
         run: |
           echo "now deploying branch: ${{ github.ref }} to the test server"
+        with:
+          node-version: '18'
 
   deploy-production:
     name: Deploy to Production
