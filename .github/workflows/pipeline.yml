@@ -50,7 +50,7 @@ jobs:
     steps:
       - name: Print deployment message
         run: |
-        echo "now deploying branch: ${{ github.ref }} to the test server"
+          echo "now deploying branch: ${{ github.ref }} to the test server"
 
   deploy-production:
     name: Deploy to Production
