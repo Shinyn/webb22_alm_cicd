@@ -1,0 +1,6 @@
+name: fakeJob
+
+on:
+  push:
+    branches:
+      - main
