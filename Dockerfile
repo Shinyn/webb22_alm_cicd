@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM node:latest
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -13,7 +13,7 @@ RUN npm install
 COPY . .
 
 # Expose a port that the application listens on
-EXPOSE 3000
+EXPOSE 7777
 
 # Define the command to run when the container starts
 CMD ["npm", "start"]
