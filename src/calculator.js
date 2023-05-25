@@ -8,6 +8,11 @@ class Calculator {
     return this.result;
   }
 
+  multiply(n1, n2) {
+    this.result = n1 * n2;
+    return this.result;
+  }
+
   getResult() {
     return this.result;
   }
